@@ -60,7 +60,7 @@
     color: hsl(0, 0%, 100%);
     padding: 0 6px;
     border-radius: 10px;
-    top:0;
+    top: 0;
     left: 18px;
     position: absolute;
   }
@@ -73,6 +73,35 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
+.cart-menu {
+  position: absolute;
+  width: 300px;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+  right: 10px;
+  top: 90px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  .title {
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid hsl(25, 100%, 94%);
+  }
+
+  .empty {
+    height: 100px;
+    padding: 10px;
+    color: hsl(220, 14%, 75%);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Orange: hsl(26, 100%, 55%)
+// Pale orange: hsl(25, 100%, 94%)
 
 // Very vark blue: hsl(220, 13%, 13%)
 // Dark grayish blue: hsl(219, 9%, 45%)

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import css from './Header.module.scss';
 import logo from '../assets/logo.svg';
 import iconCart from '../assets/icon-cart.svg';
 import avatarImg from '../assets/image-avatar.png';
 
-function Header() {
+function Header({ cart }) {
+  const [showCart, setShowCart] = useState(false);
+
   return (
     <nav className={css.container}>
       <a href="/">
@@ -31,17 +33,22 @@ function Header() {
         </li>
       </ul>
 
-      <div className={css.cart}>
+      <div className={css.cart} onClick={() => setShowCart(!showCart)}>
         <img src={iconCart} alt="cart" />
         <span className={css.total}>0</span>
       </div>
 
       <img src={avatarImg} alt="Avatar" className={css.avatar} />
 
-      {/* <div className={css['cart-menu']}>
-        <div>Carinho</div>
-        <div>Seu carinho está vazio</div>
-      </div> */}
+      {showCart && (
+        <div className={css['cart-menu']}>
+          <div className={css.title}>Carinho</div>
+          {cart.items.length == 0 && (
+            <div className={css.empty}>O seu carrinho está vazio.</div>
+          )}
+          {cart.items.length > 0 && <div>items</div>}
+        </div>
+      )}
     </nav>
   );
 }
