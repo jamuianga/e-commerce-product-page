@@ -1,20 +1,42 @@
 import React, { useState } from 'react';
+import Cart from './Cart';
+
 import css from './Header.module.scss';
 import logo from '../assets/logo.svg';
-import iconCart from '../assets/icon-cart.svg';
 import avatarImg from '../assets/image-avatar.png';
-import Cart from './Cart';
+
+import iconCart from '../assets/icon-cart.svg';
+import iconMenu from '../assets/icon-menu.svg';
+import iconClose from '../assets/icon-close.svg';
 
 function Header({ cart }) {
   const [showCart, setShowCart] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <nav className={css.container}>
+      <button
+        type="button"
+        className={css['icon-menu']}
+        onClick={() => setShowMenu(!showMenu)}
+      >
+        <img src={iconMenu} alt="Icon menu" />
+      </button>
+
       <a href="/">
         <img src={logo} alt="Logo" className={css.logo} />
       </a>
 
-      <ul className={css.menu}>
+      <ul className={`${css.menu} ${showMenu ? css.show : ''}`}>
+        {/* <li> */}
+        <button
+          type="button"
+          className={css['icon-close-menu']}
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          <img src={iconClose} alt="Icon menu" />
+        </button>
+        {/* </li> */}
         <li>
           <a href="#">Colecções</a>
         </li>

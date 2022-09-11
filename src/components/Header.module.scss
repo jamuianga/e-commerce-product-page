@@ -1,13 +1,18 @@
 .container {
   display: flex;
   align-items: center;
-  padding: 0 10px;
   border-bottom: 1px solid hsl(25, 100%, 94%);
   height: 90px;
+  padding: 0 10px;
 
   a {
     text-decoration: none;
   }
+}
+
+.icon-menu,
+.icon-close-menu {
+  display: none;
 }
 
 .logo {
@@ -24,7 +29,7 @@
   display: flex;
 
   li {
-    padding: 0px 20px;
+    padding: 0 20px;
 
     .active {
       color: hsl(220, 13%, 13%);
@@ -97,6 +102,62 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    height: 60px;
+  }
+
+  .icon-menu {
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .icon-close-menu {
+    display: inherit;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .menu {
+    display: none;
+
+    li {
+      padding: 10px 20px;
+      font-weight: 700;
+
+      .active {
+        color: hsl(220, 13%, 13%);
+        border-bottom: none;
+      }
+
+      a {
+        &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .show {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 190px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding-top: 20px;
   }
 }
 
