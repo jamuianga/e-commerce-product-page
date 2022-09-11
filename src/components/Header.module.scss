@@ -1,4 +1,57 @@
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid hsl(25, 100%, 94%);
+  height: 90px;
+
+  a {
+    text-decoration: none;
+  }
 }
+
+.logo {
+  width: 138px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+
+  li {
+    padding: 0px 20px;
+
+    .active {
+      color: hsl(220, 13%, 13%);
+      border-bottom: 2px solid hsl(26, 100%, 55%);
+    }
+  }
+
+  a {
+    color: hsl(219, 9%, 45%);
+    padding-bottom: 34px;
+
+    &:hover {
+      color: hsl(220, 13%, 13%);
+      border-bottom: 2px solid hsl(26, 100%, 55%);
+    }
+  }
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
+}
+
+// Very vark blue: hsl(220, 13%, 13%)
+// Dark grayish blue: hsl(219, 9%, 45%)
+// Grayish blue: hsl(220, 14%, 75%)
+// Light grayish blue: hsl(223, 64%, 98%)
+// White: hsl(0, 0%, 100%)

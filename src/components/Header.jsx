@@ -7,16 +7,21 @@ import avatarImg from '../assets/image-avatar.png';
 function Header() {
   return (
     <nav className={css.container}>
-      <img src={logo} alt="Logo" />
-      <ul>
+      <a href="/">
+        <img src={logo} alt="Logo" className={css.logo} />
+      </a>
+
+      <ul className={css.menu}>
         <li>
-          <a href="#">Coleções</a>
+          <a href="#">Colecções</a>
         </li>
         <li>
           <a href="#">Homens</a>
         </li>
         <li>
-          <a href="#">Mulheres</a>
+          <a href="#" className={css.active}>
+            Mulheres
+          </a>
         </li>
         <li>
           <a href="#">Sobre nós</a>
@@ -25,14 +30,15 @@ function Header() {
           <a href="#">Contacto</a>
         </li>
       </ul>
+
       <div>
         <img src={iconCart} alt="cart" />
         <span>0</span>
       </div>
-      <div>
-        <img src={avatarImg} alt="" />
-      </div>
-      <div>
+
+      <img src={avatarImg} alt="Avatar" className={css.avatar} />
+
+      <div className={css['cart-menu']}>
         <div>Carinho</div>
         <div>Seu carinho está vazio</div>
       </div>
