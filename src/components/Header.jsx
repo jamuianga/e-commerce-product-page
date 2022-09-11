@@ -3,6 +3,7 @@ import css from './Header.module.scss';
 import logo from '../assets/logo.svg';
 import iconCart from '../assets/icon-cart.svg';
 import avatarImg from '../assets/image-avatar.png';
+import Cart from './Cart';
 
 function Header({ cart }) {
   const [showCart, setShowCart] = useState(false);
@@ -46,7 +47,7 @@ function Header({ cart }) {
           {cart.items.length == 0 && (
             <div className={css.empty}>O seu carrinho está vazio.</div>
           )}
-          {cart.items.length > 0 && <div>items</div>}
+          {cart.items.length > 0 && <Cart />}
         </div>
       )}
     </nav>
