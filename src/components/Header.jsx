@@ -31,17 +31,17 @@ function Header() {
         </li>
       </ul>
 
-      <div>
+      <div className={css.cart}>
         <img src={iconCart} alt="cart" />
-        <span>0</span>
+        <span className={css.total}>0</span>
       </div>
 
       <img src={avatarImg} alt="Avatar" className={css.avatar} />
 
-      <div className={css['cart-menu']}>
+      {/* <div className={css['cart-menu']}>
         <div>Carinho</div>
         <div>Seu carinho está vazio</div>
-      </div>
+      </div> */}
     </nav>
   );
 }
