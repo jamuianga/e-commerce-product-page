@@ -28,7 +28,6 @@ function Header({ cart }) {
       </a>
 
       <ul className={`${css.menu} ${showMenu ? css.show : ''}`}>
-        {/* <li> */}
         <button
           type="button"
           className={css['icon-close-menu']}
@@ -36,7 +35,6 @@ function Header({ cart }) {
         >
           <img src={iconClose} alt="Icon menu" />
         </button>
-        {/* </li> */}
         <li>
           <a href="#">Colecções</a>
         </li>
