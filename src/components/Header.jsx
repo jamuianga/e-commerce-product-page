@@ -36,21 +36,21 @@ function Header({ cart }) {
           <img src={iconClose} alt="Icon menu" />
         </button>
         <li>
-          <a href="#">Colecções</a>
+          <a href="#">Collections</a>
         </li>
         <li>
-          <a href="#">Homens</a>
+          <a href="#">Men</a>
         </li>
         <li>
           <a href="#" className={css.active}>
-            Mulheres
+            Women
           </a>
         </li>
         <li>
-          <a href="#">Sobre nós</a>
+          <a href="#">About</a>
         </li>
         <li>
-          <a href="#">Contacto</a>
+          <a href="#">Contact</a>
         </li>
       </ul>
 
